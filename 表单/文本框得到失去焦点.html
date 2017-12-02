@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            padding:2px;
+        }
+        input{
+            outline:none;
+        }
+        .focus{
+            border:1px solid #f00;
+            background:#fcc;
+        }
+    </style>
+</head>
+<body>
+<form action="" method="post" id="regForm">
+    <fieldset>
+        <legend>个人基本信息</legend>
+        <div>
+            <label for="username">名称:</label>
+            <input type="text" id="username" value="名称" />
+        </div>
+        <div>
+            <label for="passward">密码:</label>
+            <input type="password" id="passward" value="11"/>
+        </div>
+        <div>
+            <label for="detail">详细信息:</label>
+            <textarea name="" id="detail" cols="20" rows="2"></textarea>
+        </div>
+
+    </fieldset>
+</form>
+<script src="../jquery-1.12.4.js"></script>
+<script>
+        $(":input").focus(function(){
+            if(this.value==this.defaultValue){
+                this.value='';
+            }
+            $(this).addClass("focus");
+        }).blur(function(){
+            if(this.value==''){
+                this.value=this.defaultValue;
+            }
+            $(this).removeClass('focus');
+        });
+</script>
+</body>
+</html>
