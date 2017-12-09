@@ -10,7 +10,6 @@
         .int input { padding:1px 1px; border:1px solid #ccc;height:16px;}
         .sub { padding-left:100px;}
         .sub input { margin-right:10px; }
-        .formtips{width: 200px;margin:2px;padding:2px;}
         .onError{
             background:#FFE0E9 url(reg3.gif) no-repeat 0 center;
             padding-left:25px;
@@ -20,9 +19,6 @@
             background:#E9FBEB url(reg4.gif) no-repeat 0 center;
             padding-left:25px;
             display:none;
-        }
-        .high{
-            color:red;
         }
     </style>
     <script src="../jquery-1.12.4.js" type="text/javascript"></script>
@@ -37,6 +33,14 @@
                         $this.siblings('.onError').hide().end().siblings('.onSuccess').show();
                     }
                 }
+                if($this.is('#email')) {
+                    if ($this.value == "" || ( $this.value != "" && !/.+@.+\.[a-zA-Z]{2,4}$/.test(this.value) )) {
+
+                    }
+                }
+            })
+            $('.sub').on('click',function(){
+
             })
         });
     </script>
