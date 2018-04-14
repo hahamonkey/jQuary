@@ -25,9 +25,11 @@
         $(':checkbox').prop('checked',false);
     })
     $('#CheckedRev').on('click',function(){
-        $(':checkbox').each(function(){
-                this.checked=!this.checked;
-                })
+        $(':checkbox').each(function(index,elem){
+              this.checked=!this.checked;
+//            elem.checked = !elem.checked;
+//            $(elem).prop("checked",!$(elem).prop("checked"));
+        })
     })
     $('#send').on('click',function(){
         var str='你选中的是\n';
