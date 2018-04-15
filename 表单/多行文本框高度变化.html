@@ -29,7 +29,7 @@
             width:300px;
             height:100px;
             border:1px solid #000;
-            font-size:40px;
+            font-size:20px;
         }
     </style>
 </head>
@@ -47,21 +47,20 @@
 </form>
 <script src="../jquery-1.12.4.js"></script>
 <script>
-    var $comment=$('#comment');
-    /*$('.bigger').on('click',function(){
-        if($comment.height()<500&& !$comment.is(':animated')){
-                $('#comment').animate({
-                    height:'+=50'
-                })
-            }
-    })
+   $(".bigger").on('click',function(){
+       if($('#comment').height() < 500){
+           $('#comment').animate({
+               height: "+=50"
+           })
+       }
+   });
     $('.smaller').on('click',function(){
-        if($comment.height()>100&& !$comment.is(':animated')){
+        if($('#comment').height() > 100){
             $('#comment').animate({
-                height:'-=50'
+                height: "-=50"
             })
         }
-    })*/
+    })
 </script>
 </body>
 </html>

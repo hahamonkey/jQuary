@@ -19,12 +19,13 @@
 <p><a href="#" title="这是自带提示2.">自带提示2.</a></p>
 <script src="jquery-1.12.4.js" type="text/javascript"></script>
 <script type="text/javascript">
-    $('.tooltip').on("click",function(e){
+    $('.tooltip').on("mouseover",function(e){
+
         var $tip = $('<span class="tip">'+this.title+'</sapn>').css({
             left: e.pageX ,
             top: e.pageY +25
         });
-        this.title = '';
+        this.title = '';//这里不能阻止默认行为，因为阻止后就取不到title的值
         $('body').append($tip);
     })
     $('.tooltip').on("mouseout",function(e){

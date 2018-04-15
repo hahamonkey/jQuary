@@ -38,8 +38,8 @@
 <script src="../jquery-1.12.4.js"></script>
 <script>
         $(":input").focus(function(){
-            if(this.value==this.defaultValue){
-                this.value='';
+            if(this.value == this.defaultValue){
+                this.value = '';''
             }
             $(this).addClass("focus");
         }).blur(function(){
@@ -48,6 +48,8 @@
             }
             $(this).removeClass('focus');
         });
+
+
 </script>
 </body>
 </html>
